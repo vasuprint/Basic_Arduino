@@ -1,0 +1,23 @@
+const int ledPin=32;
+int timeOn=500;
+int timeOff=600;
+void setup() {
+ 
+  pinMode(ledPin,OUTPUT);
+  Serial.begin(115200);
+  Serial.print("Hello Test");
+  Serial.print("LED on/off");
+  Serial.println(timeOn+timeOff);
+}
+
+void loop() {
+ 
+  digitalWrite(ledPin,LOW);
+  Serial.println("LED ON");
+  delay(timeOn);
+  digitalWrite(ledPin,HIGH);
+  Serial.println("LED Off");
+  delay(timeOff);
+  
+  
+}
